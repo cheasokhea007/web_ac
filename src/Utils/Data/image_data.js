@@ -1,5 +1,5 @@
 const images = {
-    logo: '/assets/img/test_logo.png', // Reference the image directly as a string
+    logo: '/assets/svg/logo_bank.svg',
   };
   
   export default images;
