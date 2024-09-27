@@ -19,7 +19,7 @@ const NavbarTop: React.FC = () => {
   };
 
   return (
-    <nav className="hidden md:flex items-center justify-between p-1 bg-blue-100 px-20 text-gray-500 text-sm">
+    <nav className="hidden md:flex items-center justify-between p-1 bg-thirdcolor px-20 text-gray-400 text-sm">
       {/* Left Side: Home, Careers, Contact Us */}
       <div className="flex items-center">
         <Link href="/" className="flex items-center hover:text-cyan-500">
@@ -39,20 +39,20 @@ const NavbarTop: React.FC = () => {
       <div className="flex items-center space-x-4">
         <span>Follow Us:</span>
         <Link href="https://www.facebook.com" target="_blank">
-          <FaFacebook className="text-yellow-500 hover:text-cyan-500 rounded-full" />
+          <FaFacebook className="text-primary hover:text-secondary rounded-full" />
         </Link>
         <Link href="https://t.me" target="_blank">
-          <FaTelegram className="text-yellow-500 hover:text-cyan-500 rounded-full" />
+          <FaTelegram className="text-primary hover:text-secondary rounded-full" />
         </Link>
         <Link href="https://twitter.com" target="_blank">
-          <FaTwitter className="text-yellow-500 hover:text-cyan-500 rounded-full" />
+          <FaTwitter className="text-primary hover:text-secondary rounded-full" />
         </Link>
 
         {/* Language Dropdown Button */}
         <div className="relative">
           <button
             onClick={toggleDropdown}
-            className="ml-4 bg-yellow-500 text-white px-2 py-1 rounded hover:bg-cyan-500 flex items-center text-sm"
+            className="ml-4 bg-primary text-white px-2 py-1 rounded hover:bg-cyan-500 flex items-center text-sm"
           >
             {currentLanguage === 'en' && (
               <>
