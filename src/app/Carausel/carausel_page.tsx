@@ -20,23 +20,23 @@ const CarouselPage: React.FC = () => {
       nextSlide();
     }, 5000); // Change slide every 5000 milliseconds
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
+    return () => clearInterval(interval); 
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-full px-20"> {/* Full width and height */}
-      <div className="overflow-hidden relative w-full h-full"> {/* Ensure full width and height */}
+    <div className="relative w-full h-full px-20"> 
+      <div className="overflow-hidden relative w-full h-full"> 
         {/* Carousel Content */}
         <div
           className="whitespace-nowrap transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {carouselData.map((item) => (
-            <div key={item.id} className="inline-block w-full h-full relative"> {/* Added relative here */}
+            <div key={item.id} className="inline-block w-full h-full relative"> 
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover rounded-md"
+                className="w-full h-lvh object-cover rounded-md"
               />
               <div className="absolute bottom-0 left-0 w-full p-4 bg-black bg-opacity-50 text-white">
                 <h2 className="text-lg font-bold">{item.title}</h2>
