@@ -19,43 +19,46 @@ const NavbarTop: React.FC = () => {
   };
 
   return (
-    <nav className="hidden md:flex items-center justify-between p-1 bg-thirdcolor px-20 text-gray-400 text-sm ">
+    <nav className="flex items-center justify-between p-1 bg-thirdcolor px-4 md:px-20 text-gray-400 text-sm">
       {/* Left Side: Home, Careers, Contact Us */}
-      <div className="flex items-center">
+      <div className="flex items-center space-x-2">
         <Link href="/" className="flex items-center hover:text-cyan-500">
           <FaHome className="mr-1" /> Home
         </Link>
-        <span className="mx-2">/</span>
+        <span>/</span>
         <Link href="/careers" className="flex items-center hover:text-cyan-500">
           <FaBriefcase className="mr-1" /> Careers
         </Link>
-        <span className="mx-2">/</span>
+        <span>/</span>
         <Link href="/contact" className="flex items-center hover:text-cyan-500">
           <FaPhone className="mr-1" /> Contact Us
         </Link>
       </div>
 
       {/* Right Side: Follow Us with Social Media Icons and Language Button */}
-      <div className="flex items-center space-x-4">
-        <span>Follow Us:</span>
-        <Link href="https://www.facebook.com" target="_blank">
-          <FaFacebook className="text-primary hover:text-secondary rounded-full text-xl" />
-        </Link>
-        <Link href="https://t.me" target="_blank">
-          <FaTelegram className="text-primary hover:text-secondary rounded-full text-xl" />
-        </Link>
-        <Link href="https://www.linkedin.com" target="_blank">
-          <FaLinkedin className="text-primary hover:text-secondary rounded-full text-xl" />
-        </Link>
-        <Link href="https://www.youtube.com" target="_blank">
-          <FaYoutube className="text-primary hover:text-secondary rounded-full text-xl" />
-        </Link>
+      <div className="flex items-center space-x-2 md:space-x-4">
+        {/* Hide this section on responsive view */}
+        <div className="hidden md:flex items-center">
+          <span>Follow Us:</span>
+          <Link href="https://www.facebook.com" target="_blank">
+            <FaFacebook className="text-primary hover:text-secondary rounded-full text-xl" />
+          </Link>
+          <Link href="https://t.me" target="_blank">
+            <FaTelegram className="text-primary hover:text-secondary rounded-full text-xl" />
+          </Link>
+          <Link href="https://www.linkedin.com" target="_blank">
+            <FaLinkedin className="text-primary hover:text-secondary rounded-full text-xl" />
+          </Link>
+          <Link href="https://www.youtube.com" target="_blank">
+            <FaYoutube className="text-primary hover:text-secondary rounded-full text-xl" />
+          </Link>
+        </div>
 
         {/* Language Dropdown Button */}
         <div className="relative">
           <button
             onClick={toggleDropdown}
-            className="ml-4 bg-primary text-white px-2 py-1 rounded hover:bg-secondary flex items-center text-sm"
+            className="ml-2 md:ml-4 bg-primary text-white px-2 py-1 rounded hover:bg-secondary flex items-center text-sm"
           >
             {currentLanguage === 'en' && (
               <>
@@ -82,7 +85,7 @@ const NavbarTop: React.FC = () => {
                 className="px-4 py-2 hover:bg-gray-200 flex items-center text-sm"
                 onClick={() => changeLanguage('en')}
               >
-                <Flag code="GB" className="w-5 h-5 mr-2 text-sm" /> 
+                <Flag code="GB" className="w-5 h-5 mr-2 text-sm" />
                 <Link href="/" locale="en">
                   English
                 </Link>
@@ -91,7 +94,7 @@ const NavbarTop: React.FC = () => {
                 className="px-4 py-2 hover:bg-gray-200 flex items-center text-sm"
                 onClick={() => changeLanguage('Ch')}
               >
-                <Flag code="CN" className="w-5 h-5 mr-2 text-sm" /> 
+                <Flag code="CN" className="w-5 h-5 mr-2 text-sm" />
                 <Link href="/" locale="Ch">
                   Chinese
                 </Link>
@@ -100,7 +103,7 @@ const NavbarTop: React.FC = () => {
                 className="px-4 py-2 hover:bg-gray-200 flex items-center text-sm"
                 onClick={() => changeLanguage('kh')}
               >
-                <Flag code="KH" className="w-5 h-5 mr-2 text-sm" /> 
+                <Flag code="KH" className="w-5 h-5 mr-2 text-sm" />
                 <Link href="/" locale="kh">
                   Khmer
                 </Link>

@@ -48,13 +48,13 @@ const CarouselPage: React.FC = () => {
 
         {/* Navigation Buttons */}
         <button
-          className="absolute top-1/2 left-2 lg:left-4 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white"
+          className="absolute top-1/2 left-2 lg:left-4 transform -translate-y-1/2 bg-black bg-opacity-30 p-2 rounded-full text-white"
           onClick={prevSlide}
         >
           <FaChevronLeft />
         </button>
         <button
-          className="absolute top-1/2 right-2 lg:right-4 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white"
+          className="absolute top-1/2 right-2 lg:right-4 transform -translate-y-1/2 bg-black bg-opacity-30 p-2 rounded-full text-white"
           onClick={nextSlide}
         >
           <FaChevronRight />

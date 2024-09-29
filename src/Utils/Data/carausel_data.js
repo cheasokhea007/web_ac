@@ -16,19 +16,19 @@ const carouselData = [
     {
       id: 3,
       title: "24/7 Customer Support",
-      description: "Our customer support team is available round-the-clock for your convenience.",
+      description: "Our customer support team is available ",
       image: "/assets/image/carausel/banner-Home3.jpg",  
     },
     {
       id: 4,
       title: "Instant Loan Approvals",
-      description: "Get instant approvals for personal loans at competitive interest rates.",
+      description: "Get instant approvals for personal loans",
       image: "/assets/image/carausel/banner-Home4.jpg",  
     },
     {
       id: 5,
       title: "Instant Loan Approvals",
-      description: "Get instant approvals for personal loans at competitive interest rates.",
+      description: "Get instant approvals for personal loans .",
       image: "/assets/image/carausel/banner-Home5.jpg",  
     },
   ];

@@ -1,25 +1,27 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image"; // Optimized image component from Next.js
-import { FaClock, FaPhone, FaEnvelope } from "react-icons/fa"; // FontAwesome icons
+import { FaClock, FaPhone, FaEnvelope, FaBars, FaTimes } from "react-icons/fa"; // FontAwesome icons
 import images from "@/Utils/Data/image_data"; // Importing images from a utility folder
-
+import { FaHome } from "react-icons/fa";
 const NavbarMain: React.FC = () => {
-  return (
-    <nav className=" w-full bg-white shadow-md z-50">
-      <div className="flex items-center justify-between p-4 text-gray-500 text-sm px-20">
-        {/* Left Side: Bank Logo */}
-          <div className="hidden md:flex items-center">
-            <Image
-              src={images.logo} 
-              alt="Bank Logo"
-              width={340} 
-              height={120} 
-            />
-          </div>
+  const [isOpen, setIsOpen] = useState(false);
 
-        {/* Right Side: Navigation Links */}
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className="w-full bg-white shadow-md z-50">
+      {/* Upper section with contact info */}
+      <div className="flex items-center justify-between px-2 text-gray-500 text-sm px-4 md:px-20">
+        {/* Left Side: Bank Logo for Desktop */}
+        <div className="hidden md:flex items-center">
+          <Image src={images.logo} alt="Bank Logo" width={340} height={120} />
+        </div>
+
+        {/* Right Side: Navigation Links for Desktop */}
         <div className="hidden md:flex space-x-4 md:space-x-6">
           {/* Links with icons */}
           <Link href="/open-house" className="group flex items-center hover:text-secondary">
@@ -38,7 +40,7 @@ const NavbarMain: React.FC = () => {
             </div>
             <div className="ml-2 flex flex-col">
               <span className="text-sm md:text-base text-primary">Call Us</span>
-              <span className="text-xs md:text-sm">+885 616 668 11</span>
+              <span className="text-xs md:text-sm">+855 616 668 11</span>
             </div>
           </Link>
 
@@ -52,14 +54,29 @@ const NavbarMain: React.FC = () => {
             </div>
           </Link>
         </div>
-
-
-
       </div>
 
-      {/* Lower Navigation Section */}
+      {/* Lower section with main navigation */}
       <div className="bg-primary py-4">
-        <div className="container px-20 flex justify-left space-x-8 text-white">
+       {/* Logo and hamburger menu for mobile */}
+      <div className="md:hidden flex justify-between items-center px-4">
+        <Image src={images.logo} alt="Bank Logo" width={160} height={80} />
+        <button
+          onClick={toggleMenu}
+          className="text-white border border-white rounded-md p-1 focus:outline-none"
+        >
+          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
+      </div>
+
+        {/* Navigation Links */}
+        <div className={`md:flex justify-left space-x-8 text-white px-4 md:px-20 ${isOpen ? "block" : "hidden"} md:block`}>
+         {/* Add Home Icon here */}
+          <Link href="/" className="flex items-center hover:text-secondary">
+            <FaHome className="mr-4 text-2xl" />
+
+          </Link>
+
           {/* Dropdowns for navigation */}
           <div className="relative group">
             <Link href="/personal" className="hover:text-secondary">Personal</Link>
@@ -83,7 +100,7 @@ const NavbarMain: React.FC = () => {
           <Link href="/about-us" className="hover:text-secondary">About Us</Link>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 
