@@ -3,7 +3,7 @@ import React from "react";
 import { FaChevronRight } from "react-icons/fa"; // Importing the chevron icon
 import Image from 'next/image'; // Import Image from next/image
 import { services } from "@/Utils/Data/services_data"; // Importing services data
-
+import { HiChevronDoubleRight } from "react-icons/hi";
 // Card component for mobile
 const MobileCard: React.FC<{ service: typeof services[0] }> = ({ service }) => (
   <div
@@ -27,7 +27,7 @@ const MobileCard: React.FC<{ service: typeof services[0] }> = ({ service }) => (
         href={`/services/${service.title.toLowerCase().replace(/ & /g, "-")}`} 
         className="text-[12px] flex items-center justify-center text-cyan-500 border border-cyan-500 py-1 rounded-md text-sm transition-all hover:bg-cyan-500 hover:text-white mx-10"
       >
-        Read More <FaChevronRight className="ml-1" />
+        Read More <HiChevronDoubleRight  className="ml-1" />
       </a>
   </div>
 );
