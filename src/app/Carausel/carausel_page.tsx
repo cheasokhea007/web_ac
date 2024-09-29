@@ -20,7 +20,7 @@ const CarouselPage: React.FC = () => {
       nextSlide();
     }, 5000); // Change slide every 5000 milliseconds
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, [currentIndex]);
 
   return (
@@ -38,9 +38,9 @@ const CarouselPage: React.FC = () => {
                 alt={item.title}
                 className="w-full h-auto max-h-screen object-cover rounded-md"
               />
-              <div className="absolute bottom-0 left-0 w-full p-4 bg-black bg-opacity-50 text-white">
-                <h2 className="text-lg font-bold">{item.title}</h2>
-                <p className="text-sm">{item.description}</p>
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white">
+                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold">{item.title}</h2>
+                <p className="text-sm sm:text-base lg:text-lg">{item.description}</p>
               </div>
             </div>
           ))}
@@ -59,19 +59,44 @@ const CarouselPage: React.FC = () => {
         >
           <FaChevronRight />
         </button>
-      </div>
 
-      {/* Dots Navigation */}
-      <div className="flex justify-center mt-4">
-        {carouselData.map((_, index) => (
-          <div
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`h-2 w-2 mx-1 rounded-full cursor-pointer ${
-              currentIndex === index ? "bg-primary" : "bg-gray-300"
-            }`}
-          ></div>
-        ))}
+        {/* Large Dots Navigation with Image Previews for Desktop */}
+        <div className="hidden sm:flex absolute bottom-4 left-1/2 transform -translate-x-1/2 space-x-2">
+          {carouselData.map((item, index) => (
+            <div
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`rounded-full cursor-pointer border-2 ${
+                currentIndex === index ? "border-white" : "border-primary"
+              }`}
+              style={{
+                width: "50px",
+                height: "50px",
+                backgroundColor: currentIndex === index ? "primary" : "transparent"
+              }}
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover rounded-full"
+                style={{ opacity: currentIndex === index ? 1 : 0.5 }}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Small Dots for Mobile */}
+        <div className="flex sm:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2 space-x-1">
+          {carouselData.map((item, index) => (
+            <div
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full cursor-pointer ${
+                currentIndex === index ? "bg-white border border-primary" : "bg-primary border border-primary"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
