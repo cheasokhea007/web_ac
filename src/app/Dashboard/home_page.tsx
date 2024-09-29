@@ -6,7 +6,7 @@ import CarouselPage from "../Carausel/carausel_page";
 
 const Home_Page: React.FC = () => {
   return (
-    <div className="">
+    <div className="bg-white">
     
       <NavbarTop />
       <NavbarMain />

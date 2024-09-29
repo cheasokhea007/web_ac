@@ -36,7 +36,7 @@ const CarouselPage: React.FC = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-auto max-h-screen object-cover rounded-md"
+                className="w-full h-auto max-h-screen object-cover"
               />
               <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white">
                 <h2 className="text-lg sm:text-xl lg:text-2xl font-bold">{item.title}</h2>
