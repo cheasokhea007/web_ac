@@ -10,32 +10,55 @@ const NavbarMain: React.FC = () => {
     <nav className=" w-full bg-white shadow-md z-50">
       <div className="flex items-center justify-between p-4 text-gray-500 text-sm px-20">
         {/* Left Side: Bank Logo */}
-        <div className="flex items-center">
-          <Image
-            src={images.logo} 
-            alt="Bank Logo"
-            width={250} 
-            height={70} 
-          />
-        </div>
-        
+          <div className="hidden md:flex items-center">
+            <Image
+              src={images.logo} 
+              alt="Bank Logo"
+              width={340} 
+              height={120} 
+            />
+          </div>
+
         {/* Right Side: Navigation Links */}
-        <div className="flex space-x-6">
+        <div className="hidden md:flex space-x-4 md:space-x-6">
           {/* Links with icons */}
-          <Link href="/open-house" className="flex items-center hover:text-primary">
-            <FaClock className="mr-1" /> Open House
+          <Link href="/open-house" className="group flex items-center hover:text-secondary">
+            <div className="border border-primary rounded-full p-2 md:p-4 flex items-center justify-center">
+              <FaClock className="text-sm md:text-lg text-primary group-hover:text-secondary" />
+            </div>
+            <div className="ml-2 flex flex-col">
+              <span className="text-sm md:text-base text-primary">Opening Hour</span>
+              <span className="text-xs md:text-sm">Mon - Fri, 8:00am - 3:30pm</span>
+            </div>
           </Link>
-          <Link href="/call-us" className="flex items-center hover:text-primary">
-            <FaPhone className="mr-1" /> Call Us
+
+          <Link href="/call-us" className="group flex items-center hover:text-secondary">
+            <div className="border border-primary rounded-full p-2 md:p-4 flex items-center justify-center">
+              <FaPhone className="text-sm md:text-lg text-primary group-hover:text-secondary" />
+            </div>
+            <div className="ml-2 flex flex-col">
+              <span className="text-sm md:text-base text-primary">Call Us</span>
+              <span className="text-xs md:text-sm">+885 616 668 11</span>
+            </div>
           </Link>
-          <Link href="/email" className="flex items-center hover:text-primary">
-            <FaEnvelope className="mr-1" /> Email
+
+          <Link href="/email" className="group flex items-center hover:text-secondary">
+            <div className="border border-primary rounded-full p-2 md:p-4 flex items-center justify-center">
+              <FaEnvelope className="text-sm md:text-lg text-primary group-hover:text-secondary" />
+            </div>
+            <div className="ml-2 flex flex-col">
+              <span className="text-sm md:text-base text-primary">Email</span>
+              <span className="text-xs md:text-sm">info@alphabank.com.kh</span>
+            </div>
           </Link>
         </div>
+
+
+
       </div>
 
       {/* Lower Navigation Section */}
-      <div className="bg-cyan-500 py-4">
+      <div className="bg-primary py-4">
         <div className="container px-20 flex justify-left space-x-8 text-white">
           {/* Dropdowns for navigation */}
           <div className="relative group">

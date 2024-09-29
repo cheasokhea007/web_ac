@@ -24,7 +24,7 @@ const CarouselPage: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-full px-20"> 
+    <div className="relative w-full h-auto sm:px-5 lg:px-20"> 
       <div className="overflow-hidden relative w-full h-full"> 
         {/* Carousel Content */}
         <div
@@ -32,11 +32,11 @@ const CarouselPage: React.FC = () => {
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {carouselData.map((item) => (
-            <div key={item.id} className="inline-block w-full h-full relative"> 
+            <div key={item.id} className="inline-block w-full h-auto relative"> 
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-lvh object-cover rounded-md"
+                className="w-full h-auto max-h-screen object-cover rounded-md"
               />
               <div className="absolute bottom-0 left-0 w-full p-4 bg-black bg-opacity-50 text-white">
                 <h2 className="text-lg font-bold">{item.title}</h2>
@@ -48,13 +48,13 @@ const CarouselPage: React.FC = () => {
 
         {/* Navigation Buttons */}
         <button
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white"
+          className="absolute top-1/2 left-2 lg:left-4 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white"
           onClick={prevSlide}
         >
           <FaChevronLeft />
         </button>
         <button
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white"
+          className="absolute top-1/2 right-2 lg:right-4 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white"
           onClick={nextSlide}
         >
           <FaChevronRight />

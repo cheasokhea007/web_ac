@@ -1,11 +1,16 @@
 import React from "react";
+import NavbarTop from "../Header/navbar_top";
+import NavbarMain from "../Header/navbar_main";
+import CarouselPage from "../Carausel/carausel_page";
 
 
 const Home_Page: React.FC = () => {
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="">
     
-      <h1 >Welcome to the Home Page </h1>
+      <NavbarTop />
+      <NavbarMain />
+      <CarouselPage />
       
     </div>
   );

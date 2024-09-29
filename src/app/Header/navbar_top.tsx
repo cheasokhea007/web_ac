@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { FaFacebook, FaTelegram, FaTwitter, FaChevronDown } from "react-icons/fa"; // Importing icons
+import { FaFacebook, FaTelegram, FaLinkedin, FaYoutube, FaChevronDown } from "react-icons/fa"; // Importing icons including YouTube and LinkedIn
 import Flag from "react-world-flags"; // Importing flags
 import { FaHome, FaBriefcase, FaPhone } from 'react-icons/fa';
 
@@ -39,13 +39,16 @@ const NavbarTop: React.FC = () => {
       <div className="flex items-center space-x-4">
         <span>Follow Us:</span>
         <Link href="https://www.facebook.com" target="_blank">
-          <FaFacebook className="text-primary hover:text-secondary rounded-full " />
+          <FaFacebook className="text-primary hover:text-secondary rounded-full text-xl" />
         </Link>
         <Link href="https://t.me" target="_blank">
-          <FaTelegram className="text-primary hover:text-secondary rounded-full" />
+          <FaTelegram className="text-primary hover:text-secondary rounded-full text-xl" />
         </Link>
-        <Link href="https://twitter.com" target="_blank">
-          <FaTwitter className="text-primary hover:text-secondary rounded-full" />
+        <Link href="https://www.linkedin.com" target="_blank">
+          <FaLinkedin className="text-primary hover:text-secondary rounded-full text-xl" />
+        </Link>
+        <Link href="https://www.youtube.com" target="_blank">
+          <FaYoutube className="text-primary hover:text-secondary rounded-full text-xl" />
         </Link>
 
         {/* Language Dropdown Button */}
