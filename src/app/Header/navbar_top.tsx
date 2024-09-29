@@ -38,19 +38,19 @@ const NavbarTop: React.FC = () => {
       {/* Right Side: Follow Us with Social Media Icons and Language Button */}
       <div className="flex items-center space-x-2 md:space-x-4">
         {/* Hide this section on responsive view */}
-        <div className="hidden md:flex items-center">
-          <span>Follow Us:</span>
+        <div className="hidden md:flex items-center ">
+          <span className="mr-1">Follow Us: </span>
           <Link href="https://www.facebook.com" target="_blank">
-            <FaFacebook className="text-primary hover:text-secondary rounded-full text-xl" />
+            <FaFacebook className="text-primary hover:text-secondary rounded-full text-xl mr-2 " />
           </Link>
           <Link href="https://t.me" target="_blank">
-            <FaTelegram className="text-primary hover:text-secondary rounded-full text-xl" />
+            <FaTelegram className="text-primary hover:text-secondary rounded-full text-xl mr-2"  />
           </Link>
           <Link href="https://www.linkedin.com" target="_blank">
-            <FaLinkedin className="text-primary hover:text-secondary rounded-full text-xl" />
+            <FaLinkedin className="text-primary hover:text-secondary rounded-full text-xl mr-2" />
           </Link>
           <Link href="https://www.youtube.com" target="_blank">
-            <FaYoutube className="text-primary hover:text-secondary rounded-full text-xl" />
+            <FaYoutube className="text-primary hover:text-secondary rounded-full text-xl mr-2" />
           </Link>
         </div>
 
