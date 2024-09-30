@@ -24,7 +24,7 @@ const CarouselPage: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-auto sm:px-5 lg:px-20"> 
+    <div className="relative w-full h-auto "> 
       <div className="overflow-hidden relative w-full h-full"> 
         {/* Carousel Content */}
         <div

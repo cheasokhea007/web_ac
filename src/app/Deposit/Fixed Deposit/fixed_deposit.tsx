@@ -5,7 +5,7 @@ import { fixedDepositData } from '@/Utils/Data/fixed_deposit_data'; // Adjust th
 
 const FixedDeposit: React.FC = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start pt-4 md:pt-10 p-6 bg-white rounded-lg shadow-md px-4 md:px-20">
+    <div className="flex flex-col md:flex-row justify-between items-start pt-4 md:pt-10 p-6 bg-white rounded-lg shadow-md px-4 md:px-40">
       
       {/* Mobile View (Text Left, Image Right) */}
       <div className="flex flex-col md:hidden mr-4">

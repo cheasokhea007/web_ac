@@ -4,10 +4,11 @@ import { FaChevronRight } from "react-icons/fa"; // Importing the chevron icon
 import Image from 'next/image'; // Import Image from next/image
 import { services } from "@/Utils/Data/services_data"; // Importing services data
 import { HiChevronDoubleRight } from "react-icons/hi";
+
 // Card component for mobile
 const MobileCard: React.FC<{ service: typeof services[0] }> = ({ service }) => (
   <div
-    className="bg-cyan-50 shadow-md rounded-lg flex flex-col justify-between transition-transform transform hover:scale-105 hover:shadow-lg pb-6"
+    className="bg-cyan-50 rounded-lg flex flex-col justify-between transition-transform transform hover:scale-105 hover:shadow-lg pb-6"
     style={{ minHeight: '180px', maxWidth: '200px' }} // Mobile card size
   >
     <div className="flex flex-col items-center p-4 grow justify-between">
@@ -23,19 +24,19 @@ const MobileCard: React.FC<{ service: typeof services[0] }> = ({ service }) => (
       </div>
     </div>
 
-     <a
-        href={`/services/${service.title.toLowerCase().replace(/ & /g, "-")}`} 
-        className="text-[12px] flex items-center justify-center text-cyan-500 border border-cyan-500 py-1 rounded-md text-sm transition-all hover:bg-cyan-500 hover:text-white mx-10"
-      >
-        Read More <HiChevronDoubleRight  className="ml-1" />
-      </a>
+    <a
+      href={`/services/${service.title.toLowerCase().replace(/ & /g, "-")}`} 
+      className="text-[12px] flex items-center justify-center text-cyan-500 border border-cyan-500 py-1 rounded-md text-sm transition-all hover:bg-cyan-500 hover:text-white mx-10"
+    >
+      Read More <HiChevronDoubleRight className="ml-1" />
+    </a>
   </div>
 );
 
 // Card component for desktop
 const PcCard: React.FC<{ service: typeof services[0] }> = ({ service }) => (
   <div
-    className="p-4 bg-cyan-50 shadow-md rounded-lg flex flex-col justify-between transition-transform transform hover:scale-105 hover:shadow-lg"
+    className="bg-cyan-50 p-4 shadow-md rounded-lg flex flex-col justify-between transition-transform transform hover:scale-105 hover:shadow-lg"
     style={{ minHeight: '320px', maxWidth: '350px' }} // Desktop card size
   >
     <div className="flex flex-col items-center p-6 grow justify-between">
@@ -51,20 +52,19 @@ const PcCard: React.FC<{ service: typeof services[0] }> = ({ service }) => (
       </div>
     </div>
 
-            <a
-        href={`/services/${service.title.toLowerCase().replace(/ & /g, "-")}`} // Adjust link based on service title
-        className="flex items-center justify-center text-primary hover:text-secondary border border-primary py-2 px-4 mx-auto rounded-md text-sm transition-colors mt-auto whitespace-nowrap" // Ensures single line
-        >
-        Read More <FaChevronRight className="ml-1" />
-        </a>
-
+    <a
+      href={`/services/${service.title.toLowerCase().replace(/ & /g, "-")}`} // Adjust link based on service title
+      className="flex items-center justify-center text-primary hover:text-secondary border border-primary py-2 px-4 mx-auto rounded-md text-sm transition-colors mt-auto whitespace-nowrap" // Ensures single line
+    >
+      Read More <FaChevronRight className="ml-1" />
+    </a>
   </div>
 );
 
 // Main component rendering service cards
 const ServicesCard: React.FC = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-4 md:px-10 lg:px-20 pt-4 md:pt-10">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-4 md:px-40 lg:px-40 pt-4 md:pt-10"> {/* Updated padding for larger screens */}
       {services.map((service) => (
         <div key={service.id}>
           {/* Show mobile card only on mobile screens */}

@@ -5,7 +5,7 @@ import { FaCaretRight } from "react-icons/fa";
 // Define the SavingsAccount component
 const SavingsAccount: React.FC = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start pt-4 md:pt-10 p-6 bg-white rounded-lg shadow-md px-4 md:px-20">
+    <div className="flex flex-col md:flex-row justify-between items-start pt-4 md:pt-10 p-6 bg-white rounded-lg shadow-md px-4 md:px-40">
       {/* Text Section */}
       <div className="md:w-1/2 mb-4 md:mb-0 text-left md:pr-10 ">
         <div className="flex items-center mb-2">
