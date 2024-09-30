@@ -69,66 +69,67 @@ const NavbarTop: React.FC = () => {
           </Link>
         </div>
 
-        {/* Language Dropdown Button */}
-        <div className="relative z-50"> {/* Add z-50 here */}
-          <button
-            onClick={toggleDropdown}
-            className="ml-2 md:ml-4 border border-2 border-primary text-primary px-1 py-0.5 rounded hover:bg-secondary flex items-center text-xs md:text-sm"
-          >
-            {currentLanguage === "en" && (
-              <>
-                <Flag code="GB" className="w-4 h-4 mr-1" />
-                English
-              </>
-            )}
-            {currentLanguage === "Ch" && (
-              <>
-                <Flag code="CN" className="w-4 h-4 mr-1" />
-                Chinese
-              </>
-            )}
-            {currentLanguage === "kh" && (
-              <>
-                <Flag code="KH" className="w-4 h-4 mr-1" />
-                Khmer
-              </>
-            )}
-            <FaChevronDown className="ml-1" style={{ fontSize: "0.6rem" }} />
-          </button>
+      {/* Language Dropdown Button */}
+<div className="relative z-50"> {/* Add z-50 here */}
+  <button
+    onClick={toggleDropdown}
+    className="ml-2 md:ml-4 border border-primary text-primary px-1 py-0.5 rounded hover:bg-secondary flex items-center text-xs md:text-sm"
+  >
+    {currentLanguage === "en" && (
+      <>
+        <Flag code="GB" className="w-4 h-4 mr-1" />
+        English
+      </>
+    )}
+    {currentLanguage === "Ch" && (
+      <>
+        <Flag code="CN" className="w-4 h-4 mr-1" />
+        Chinese
+      </>
+    )}
+    {currentLanguage === "kh" && (
+      <>
+        <Flag code="KH" className="w-4 h-4 mr-1" />
+        Khmer
+      </>
+    )}
+    <FaChevronDown className="ml-1" style={{ fontSize: "0.6rem" }} />
+  </button>
 
-          {/* Dropdown Menu */}
-          {isDropdownOpen && (
-            <ul className="absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-lg">
-              <li
-                className="px-4 py-2 hover:bg-gray-200 flex items-center text-xs"
-                onClick={() => changeLanguage("en")}
-              >
-                <Flag code="GB" className="w-4 h-4 mr-2" />
-                <Link href="/" locale="en" className="text-xs">
-                  English
-                </Link>
-              </li>
-              <li
-                className="px-4 py-2 hover:bg-gray-200 flex items-center text-xs"
-                onClick={() => changeLanguage("Ch")}
-              >
-                <Flag code="CN" className="w-4 h-4 mr-2" />
-                <Link href="/" locale="Ch" className="text-xs">
-                  Chinese
-                </Link>
-              </li>
-              <li
-                className="px-4 py-2 hover:bg-gray-200 flex items-center text-xs"
-                onClick={() => changeLanguage("kh")}
-              >
-                <Flag code="KH" className="w-4 h-4 mr-2" />
-                <Link href="/" locale="kh" className="text-xs">
-                  Khmer
-                </Link>
-              </li>
-            </ul>
-          )}
-        </div>
+  {/* Dropdown Menu */}
+  {isDropdownOpen && (
+    <ul className="absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-lg">
+      <li
+        className="px-4 py-2 hover:bg-gray-200 flex items-center text-xs"
+        onClick={() => changeLanguage("en")}
+      >
+        <Flag code="GB" className="w-4 h-4 mr-2" />
+        <Link href="/" locale="en" className="text-xs">
+          English
+        </Link>
+      </li>
+      <li
+        className="px-4 py-2 hover:bg-gray-200 flex items-center text-xs"
+        onClick={() => changeLanguage("Ch")}
+      >
+        <Flag code="CN" className="w-4 h-4 mr-2" />
+        <Link href="/" locale="Ch" className="text-xs">
+          Chinese
+        </Link>
+      </li>
+      <li
+        className="px-4 py-2 hover:bg-gray-200 flex items-center text-xs"
+        onClick={() => changeLanguage("kh")}
+      >
+        <Flag code="KH" className="w-4 h-4 mr-2" />
+        <Link href="/" locale="kh" className="text-xs">
+          Khmer
+        </Link>
+      </li>
+    </ul>
+  )}
+</div>
+
       </div>
     </nav>
   );

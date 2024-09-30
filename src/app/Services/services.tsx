@@ -8,22 +8,23 @@ import { HiChevronDoubleRight } from "react-icons/hi";
 // Card component for mobile
 const MobileCard: React.FC<{ service: (typeof services)[0] }> = ({ service }) => (
   <div
-    className="bg-cyan-50 rounded-lg flex flex-col items-center justify-center transition-transform transform hover:scale-105 hover:shadow-lg"
+    className="pt-4 bg-cyan-50 rounded-lg flex flex-col items-center justify-start transition-transform transform hover:scale-105 hover:shadow-lg"
     style={{ minHeight: "80px", maxWidth: "80px" }} // Adjusted mobile card size
   >
-    <Image
-      src={service.icon}
-      alt={service.title}
-      width={22}
-      height={22}
-      className="text-primary mb-2" // Icon size for mobile
-    />
-    <h3 className="text-[10px] text-black font-semibold text-center overflow-hidden text-ellipsis">
+    <div className="flex items-center justify-center" style={{ height: "30px" }}>
+      <Image
+        src={service.icon}
+        alt={service.title}
+        width={22}
+        height={22}
+        className="text-primary" // Fixed icon size for mobile
+      />
+    </div>
+    <h3 className="text-[10px] text-black font-semibold text-center overflow-hidden text-ellipsis whitespace-normal">
       {service.title}
     </h3>
   </div>
 );
-
 
 
 // Card component for desktop
