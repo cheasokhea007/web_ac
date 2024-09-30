@@ -5,6 +5,7 @@ import CarouselPage from "../Carausel/carausel_page";
 import ServicesCard from "../Services/services";
 import SavingsAccount from "../Deposit/SavingsAccount/savings_account";
 import FixedDeposit from "../Deposit/Fixed Deposit/fixed_deposit";
+import CreditDeposit from "../Deposit/Credits/credit_deposit";
 
 
 const Home_Page: React.FC = () => {
@@ -17,6 +18,7 @@ const Home_Page: React.FC = () => {
       <ServicesCard />
       <SavingsAccount />
       <FixedDeposit />
+      <CreditDeposit />
       
     </div>
   );

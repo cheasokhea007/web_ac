@@ -8,7 +8,7 @@ const FixedDeposit: React.FC = () => {
     <div className="flex flex-col md:flex-row justify-between items-start pt-4 md:pt-10 p-6 bg-white rounded-lg shadow-md px-4 md:px-20">
       
       {/* Mobile View (Text Left, Image Right) */}
-      <div className="flex flex-col md:hidden">
+      <div className="flex flex-col md:hidden mr-4">
         {/* Text Section */}
         <div className="text-left mb-4">
           <div className="flex items-center mb-2">
