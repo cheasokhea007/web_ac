@@ -8,23 +8,23 @@ const SavingsAccount: React.FC = () => {
     <div className="flex flex-col md:flex-row justify-between items-start pt-4 md:pt-10 p-6 bg-white rounded-lg shadow-md px-4 md:px-60">
       {/* Text Section */}
       <div className="md:w-1/2 mb-4 md:mb-0 text-left md:pr-10 ">
-        <div className="flex items-center mb-2">
-          <h2 className="text-2xl font-bold text-primary">
+        <div className="flex items-center mb-1 ">
+          <h2 className="text-sm md:text-xl  text-primary">
             {savingsAccountData.title}
           </h2>
-          <div className="ml-4 line-decor"></div>
+          <div className="ml-2 line-decor"></div>
         </div>
 
-        <h3 className="text-xl font-semibold text-secondary mb-4">
+        <h3 className="text-base md:text-2xl font-semibold text-secondary mb-4">
           {savingsAccountData.subtitle}
         </h3>
 
         {/* Description (hidden on mobile) */}
-        <p className="text-gray-700 mb-4 hidden md:block ">
+        <p className="text-gray-700 mb-4 hidden md:block">
           {savingsAccountData.description}
         </p>
 
-        <h4 className="text-lg font-semibold mb-2 text-black">
+        <h4 className="text-sm md:text-lg font-semibold mb-2 text-black">
           Features and Benefits
         </h4>
         <ul className="list-disc list-inside text-gray-700">
