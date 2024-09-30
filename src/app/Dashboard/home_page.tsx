@@ -8,6 +8,7 @@ import FixedDeposit from "../Deposit/Fixed Deposit/fixed_deposit";
 import CreditDeposit from "../Deposit/Credits/credit_deposit";
 import ProductServicesBlock from "../ProductServices/product_services_block";
 import FooterPage from "../Footer/footer_page";
+import AvailableProductBlock from "../AvailableProducts/AvailableProductBlock";
 
 
 const Home_Page: React.FC = () => {
@@ -21,6 +22,7 @@ const Home_Page: React.FC = () => {
       <SavingsAccount />
       <FixedDeposit />
       <CreditDeposit />
+      <AvailableProductBlock />
       <ProductServicesBlock />
       <FooterPage />
       

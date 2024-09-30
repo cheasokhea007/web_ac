@@ -51,3 +51,30 @@ body {
   top: 0; /* Make the bottom line longer and move it to the top */
   width: 100%; /* The longer line at the top */
 }
+
+/* Global CSS or Tailwind Overrides */
+.line-decor2 {
+  position: relative;
+  width: 40px; /* Adjust width as needed */
+  height: 10px;
+}
+.line-decor2::before,
+.line-decor2::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #00A6C2; /* Adjust the color as necessary */
+  width: 70%;
+}
+
+.line-decor2::before {
+  bottom: 0; /* Make the top line shorter and move it to the bottom */
+  width: 70%; /* The shorter line at the bottom */
+  left: 12px;
+}
+
+.line-decor2::after {
+  top: 0; /* Make the bottom line longer and move it to the top */
+  width: 100%; /* The longer line at the top */
+ 
+}

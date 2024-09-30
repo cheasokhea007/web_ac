@@ -1,6 +1,6 @@
 // src/components/Footer/FooterPage.tsx
-import React from 'react';
-import { FaFacebook, FaTelegram, FaLinkedin, FaYoutube } from "react-icons/fa"; 
+import React from "react";
+import { FaFacebook, FaTelegram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { MdPhoneEnabled, MdEmail, MdLocationOn } from "react-icons/md";
 import { FaAngleRight } from "react-icons/fa";
 const FooterPage: React.FC = () => {
@@ -13,18 +13,23 @@ const FooterPage: React.FC = () => {
           <div className="flex mb-2">
             <MdLocationOn className="text-primary mr-2 text-xl" />
             <p className="flex-1 text-gray-400">
-              The Gateway Building, Ground & 33rd floors, Russian Federation Blvd. Phsar Depou 3, Tuol Kork (St. 210) Phnom Penh, Cambodia.
+              The Gateway Building, Ground & 33rd floors, Russian Federation
+              Blvd. Phsar Depou 3, Tuol Kork (St. 210) Phnom Penh, Cambodia.
             </p>
           </div>
           <p className="mt-4 flex items-start mb-2">
             <MdPhoneEnabled className="text-primary mr-2" />
-            <a className='text-gray-400' href="tel:+85523886668">+85523 886 668</a>
+            <a className="text-gray-400" href="tel:+85523886668">
+              +85523 886 668
+            </a>
           </p>
           <p className="flex items-center mb-4">
             <MdEmail className="text-primary mr-2" />
-            <a className='text-gray-400' href="mailto:info@alphabank.com.kh">info@alphabank.com.kh</a>
+            <a className="text-gray-400" href="mailto:info@alphabank.com.kh">
+              info@alphabank.com.kh
+            </a>
           </p>
-         {/* Social Icons Section */}
+          {/* Social Icons Section */}
           <div className="flex space-x-4">
             <a
               href="https://www.facebook.com"
@@ -59,35 +64,59 @@ const FooterPage: React.FC = () => {
               <FaYoutube className="text-2xl  text-primary" />
             </a>
           </div>
-
         </div>
-       
-       {/* Quick Links Section */}
-      <div className="mb-6 md:mb-0 pl-10">
-        <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-        <ul>
-          <li className="flex items-center mb-4">
-            <FaAngleRight className="text-primary mr-2" />
-            <a href="#" className="hover:text-primary transition duration-300 transform hover:scale-105">About Us</a>
-          </li>
-          <li className="flex items-center mb-4">
-            <FaAngleRight className="text-primary mr-2" />
-            <a href="#" className="hover:text-primary transition duration-300 transform hover:scale-105">Contact Us</a>
-          </li>
-          <li className="flex items-center mb-4">
-            <FaAngleRight className="text-primary mr-2" />
-            <a href="#" className="hover:text-primary transition duration-300 transform hover:scale-105">Products & Services</a>
-          </li>
-          <li className="flex items-center mb-4">
-            <FaAngleRight className="text-primary mr-2" />
-            <a href="#" className="hover:text-primary transition duration-300 transform hover:scale-105">Terms Of Use</a>
-          </li>
-          <li className="flex items-center">
-            <FaAngleRight className="text-primary mr-2" />
-            <a href="#" className="hover:text-primary transition duration-300 transform hover:scale-105">Support</a>
-          </li>
-        </ul>
-      </div>
+
+        {/* Quick Links Section */}
+        <div className="mb-6 md:mb-0 pl-10">
+          <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+          <ul>
+            <li className="flex items-center mb-4">
+              <FaAngleRight className="text-primary mr-2" />
+              <a
+                href="#"
+                className="hover:text-primary transition duration-300 transform hover:scale-105"
+              >
+                About Us
+              </a>
+            </li>
+            <li className="flex items-center mb-4">
+              <FaAngleRight className="text-primary mr-2" />
+              <a
+                href="#"
+                className="hover:text-primary transition duration-300 transform hover:scale-105"
+              >
+                Contact Us
+              </a>
+            </li>
+            <li className="flex items-center mb-4">
+              <FaAngleRight className="text-primary mr-2" />
+              <a
+                href="#"
+                className="hover:text-primary transition duration-300 transform hover:scale-105"
+              >
+                Products & Services
+              </a>
+            </li>
+            <li className="flex items-center mb-4">
+              <FaAngleRight className="text-primary mr-2" />
+              <a
+                href="#"
+                className="hover:text-primary transition duration-300 transform hover:scale-105"
+              >
+                Terms Of Use
+              </a>
+            </li>
+            <li className="flex items-center">
+              <FaAngleRight className="text-primary mr-2" />
+              <a
+                href="#"
+                className="hover:text-primary transition duration-300 transform hover:scale-105"
+              >
+                Support
+              </a>
+            </li>
+          </ul>
+        </div>
 
         {/* Gallery Section */}
         <div className="mb-8 md:mb-0">
@@ -98,7 +127,9 @@ const FooterPage: React.FC = () => {
         {/* Newsletter Section */}
         <div>
           <h3 className="text-lg font-bold mb-4">Newsletter</h3>
-          <p className="mb-4">Need to receive upcoming events from the bank? Subscribe now!</p>
+          <p className="mb-4">
+            Need to receive upcoming events from the bank? Subscribe now!
+          </p>
           <input
             type="email"
             placeholder="Your email"
@@ -111,23 +142,23 @@ const FooterPage: React.FC = () => {
       </div>
 
       <div className="copyright">
-  {/* Full-width horizontal line */}
+        {/* Full-width horizontal line */}
         <hr className="border-t border-primary my-4 w-full opacity-50" />
 
         <div className="flex flex-col-2 items-center justify-between mt-4 mb-2 px-48 ">
-        <p className="text-start">
-          <span className="text-[15px] text-gray-400">&copy; 2024 All Rights Reserved.</span>
-          <br /> {/* This adds a line break */}
-          <span>ALPHA COMMERCIAL BANK PLC</span>
-        </p>
-
+          <p className="text-start">
+            <span className="text-[15px] text-gray-400">
+              &copy; 2024 All Rights Reserved.
+            </span>
+            <br /> {/* This adds a line break */}
+            <span>ALPHA COMMERCIAL BANK PLC</span>
+          </p>
 
           <p className=" text-gray-400 text-[16px] mt-2">
             Development by: Alpha Bank Developer
           </p>
         </div>
       </div>
-
     </footer>
   );
 };

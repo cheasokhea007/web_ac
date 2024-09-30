@@ -7,11 +7,15 @@ const CarouselPage: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
-    setCurrentIndex(currentIndex === 0 ? carouselData.length - 1 : currentIndex - 1);
+    setCurrentIndex(
+      currentIndex === 0 ? carouselData.length - 1 : currentIndex - 1
+    );
   };
 
   const nextSlide = () => {
-    setCurrentIndex(currentIndex === carouselData.length - 1 ? 0 : currentIndex + 1);
+    setCurrentIndex(
+      currentIndex === carouselData.length - 1 ? 0 : currentIndex + 1
+    );
   };
 
   // Auto slide every 5 seconds
@@ -24,23 +28,27 @@ const CarouselPage: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-auto "> 
-      <div className="overflow-hidden relative w-full h-full"> 
+    <div className="relative w-full h-auto ">
+      <div className="overflow-hidden relative w-full h-full">
         {/* Carousel Content */}
         <div
           className="whitespace-nowrap transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {carouselData.map((item) => (
-            <div key={item.id} className="inline-block w-full h-auto relative"> 
+            <div key={item.id} className="inline-block w-full h-auto relative">
               <img
                 src={item.image}
                 alt={item.title}
                 className="w-full h-auto max-h-screen object-cover"
               />
               <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white">
-                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold">{item.title}</h2>
-                <p className="text-sm sm:text-base lg:text-lg">{item.description}</p>
+                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold">
+                  {item.title}
+                </h2>
+                <p className="text-sm sm:text-base lg:text-lg">
+                  {item.description}
+                </p>
               </div>
             </div>
           ))}
@@ -72,7 +80,8 @@ const CarouselPage: React.FC = () => {
               style={{
                 width: "50px",
                 height: "50px",
-                backgroundColor: currentIndex === index ? "primary" : "transparent"
+                backgroundColor:
+                  currentIndex === index ? "primary" : "transparent",
               }}
             >
               <img
@@ -92,7 +101,9 @@ const CarouselPage: React.FC = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full cursor-pointer ${
-                currentIndex === index ? "bg-white border border-primary" : "bg-primary border border-primary"
+                currentIndex === index
+                  ? "bg-white border border-primary"
+                  : "bg-primary border border-primary"
               }`}
             />
           ))}
